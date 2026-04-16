@@ -1,12 +1,11 @@
-import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
-import { inspectAttr } from 'kimi-plugin-inspect-react'
+import path from "path";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+// Import inspectAttr if needed
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: './',
-  plugins: [inspectAttr(), react()],
+  base: '/WhiteMeatShop/', // Fixed for GitHub Pages
+  plugins: [react()],      // Simplified for testing
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

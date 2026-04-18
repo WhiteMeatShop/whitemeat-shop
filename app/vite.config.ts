@@ -4,17 +4,19 @@ import { defineConfig } from "vite"
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/', // This ensures Vercel looks in the right folder
+  // This '/' is the most important line for Vercel
+  base: '/', 
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
         name: 'WhiteMeatShop',
         short_name: 'WhiteMeat',
         start_url: '/',
         display: 'standalone',
+        background_color: '#001233',
+        theme_color: '#FF5A00',
         icons: [
           {
             src: '/icons/icon-192x192.png',
@@ -35,4 +37,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+})

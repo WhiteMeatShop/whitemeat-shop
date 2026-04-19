@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  // This '/' is the most important line for Vercel
+  // This tells Vercel to look for assets in the main folder
   base: '/', 
   plugins: [
     react(),
